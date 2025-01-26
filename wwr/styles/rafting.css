@@ -1,11 +1,13 @@
 /* The following CSS selector (rule) removes underlines from all hyperlinks. Do not do this.*/
 a {
 	text-decoration: none;
-}:root {
-    --primary-color: #656565;
-    --secondary-color:#808782;
-    --accent1-color: #A6D3A0;
-    --accent2-color: #D1FFD7;
+}
+
+:root {
+    --primary-color: #656564;
+    --secondary-color:#808781;
+    --accent0-color: #A6D3A0;
+    --accent1-color: #D1FFD7;
   }
 
  
