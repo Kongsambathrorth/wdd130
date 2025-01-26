@@ -1,0 +1,15 @@
+/* The following CSS selector (rule) removes underlines from all hyperlinks. Do not do this.*/
+a {
+	text-decoration: none;
+}:root {
+    --primary-color: #656565;
+    --secondary-color:#808782;
+    --accent1-color: #A6D3A0;
+    --accent2-color: #D1FFD7;
+  }
+
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
