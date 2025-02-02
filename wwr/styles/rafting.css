@@ -1,109 +1,152 @@
-/* styles.css */
-
+/* Basic styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Use the Google Font */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
 }
 
+/* Header Styles */
 header {
-    margin: 1rem auto;
+    background-color: #f0f0f0; /* Example background color */
+    padding: 20px;
+}
+
+.header-content {
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    max-width: 1000px;
-    padding: 0 1rem;
-}
-
-.logo img {
-    margin-right: 1rem;
-    width: 64px;
-    height: auto;
-}
-
-h1 {
-    font-size: 2rem;
-    font-family: Acme, Arial, sans-serif; /* Consider a fallback font */
-    margin-right: auto;
-}
-
-nav {
-    display: flex;
+    justify-content: space-between; /* Space logo and nav */
     align-items: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
 }
 
 nav li {
-    margin-left: 1rem;
+    margin-left: 20px;
 }
 
-nav a {
-    color: navy; /* Check contrast */
-    padding: 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    color: tomato; /* Check contrast */
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-}
-
-.history-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 20px;
+/* Hero Section Styles */
+.hero {
+    display: flex;
     align-items: center;
+    padding: 40px;
 }
 
-.adventures-grid {
+.hero-content {
+    flex: 1; /* Takes up available space */
+}
+
+.hero-content p {
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    text-align: left;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.inline-image {
+    margin-right: 15px;
+    max-width: 150px; /* Reduced max-width */
+    height: auto;
+    float: right;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center; /* Center the image */
+}
+
+.hero-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+}
+
+/* History Section Styles */
+.history-content {
+    display: flex;
+    align-items: center; /* Vertically center the image and text */
+    gap: 20px; /* Space between columns and image */
+}
+
+.history-text-columns {
+    display: flex; /* Make the text columns a flex container */
+    flex: 1; /* Allow text columns to take up available space */
+    align-items: stretch; /* KEY: Stretch columns to equal height */
+}
+
+.history-text-column {
+    flex: 1; /* Each column takes up equal space */
+    display: flex; /* Make each text column a flex container */
+    flex-direction: column; /* Stack text within each column */
+    justify-content: center; /* Vertically center text within columns */
+}
+
+.left-column {
+    text-align: left; /* Align text in the left column to the left */
+}
+
+.right-column {
+    text-align: right; /* Align text in the right column to the right */
+}
+
+.history-image {
+    /* No changes needed here, but you can adjust image size if you want */
+}
+
+/* Media query for responsiveness (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+    .history-content {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center horizontally */
+    }
+    .history-text-columns {
+        flex-direction: column; /* Stack text columns vertically */
+        gap: 20px; /* Add gap between text columns when stacked */
+    }
+    .left-column, .right-column { /* Center text within columns on small screens */
+        text-align: center;
+    }
+    .history-image {
+        margin: 20px 0; /* Add top and bottom margins, remove left/right */
+    }
+}
+
+/* Adventures Section Styles */
+.adventures {
+    padding: 40px;
+}
+
+.adventure-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
 }
 
-.adventures-grid figure {
+.adventure-grid figure {
     margin: 0;
+}
+
+.adventure-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-footer {
-    background-color: #333; /* Check contrast */
-    color: white; /* Check contrast */
-    padding: 10px;
-    text-align: right;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .social-media {
     display: flex;
-    justify-content: flex-end;
-}
-
-.social-media img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-}
-
-.welcome-section {
-    text-align: center; /* Center the heading */
-    padding: 20px;
-}
-
-.inline-image {
-    float: left; /* Image on the left, text wraps around */
-    margin: 0 15px 10px 0; /* Add spacing around the image */
-    max-width: 200px; /* Adjust as needed */
-    height: auto;
+    gap: 10px;
 }
