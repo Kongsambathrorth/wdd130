@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,52 +7,43 @@ body {
 }
 
 header {
-    margin: 1rem auto;
-    display: flex; /* Use flexbox for horizontal layout */
-    align-items: center; /* Vertically align items */
-    border-bottom: 1px solid #ccc;
-    max-width: 1000px;
-    padding: 0 1rem; /* Add some side padding */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
 }
 
-.logo img {
-    margin-right: 1rem; /* Space between logo and title/nav */
-    width: 64px;
-    height: auto;
+header img {
+    width: 60px;
+    height: 60px;
 }
 
-h1 {
-    font-size: 2rem;
-    font-family: Acme, Arial, sans-serif;
-    margin-right: auto; /* Push title to the left */
+header h1 {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 24px;
 }
 
-nav {  /* Style the nav element directly */
+nav ul {
     display: flex;
-    /* No need for flex-wrap here */
-}
-
-nav ul { /* Style the ul inside the nav */
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 0; /* Important: Remove default ul margins */
-    display: flex; /* Make the list items horizontal */
 }
 
-nav li {
-    margin-right: 1rem; /* Space between nav items */
+nav ul li {
+    margin: 0 15px;
 }
 
-nav a {
-    color: navy;
-    padding: 10px; /* Adjust padding as needed */
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 18px;
 }
 
-nav a:hover {
-    color: tomato;
-    font-weight: 700;
+nav ul li a:hover {
     text-decoration: underline;
 }
 
