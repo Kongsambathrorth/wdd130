@@ -1,152 +1,147 @@
 /* Basic styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 /* Header Styles */
 header {
-    background-color: #f0f0f0; /* Example background color */
-    padding: 20px;
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between; /* Space logo and nav */
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 /* Hero Section Styles */
 .hero {
-    display: flex;
-    align-items: center;
-    padding: 40px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
 }
 
 .hero-content {
-    flex: 1; /* Takes up available space */
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
 }
 
 .hero-content p {
-    display: flex;
-    align-items: flex-start; /* Align to the top */
-    text-align: left;
-    flex-wrap: wrap; /* Allow wrapping */
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  margin: 0;
 }
 
 .inline-image {
-    margin-right: 15px;
-    max-width: 150px; /* Reduced max-width */
-    height: auto;
-    float: right;
-}
-
-.hero-image {
-    flex: 1;
-    text-align: center; /* Center the image */
-}
-
-.hero-image img {
-    max-width: 100%; /* Make image responsive */
-    height: auto;
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+  float: left;
 }
 
 /* History Section Styles */
 .history-content {
-    display: flex;
-    align-items: center; /* Vertically center the image and text */
-    gap: 20px; /* Space between columns and image */
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .history-text-columns {
-    display: flex; /* Make the text columns a flex container */
-    flex: 1; /* Allow text columns to take up available space */
-    align-items: stretch; /* KEY: Stretch columns to equal height */
+  display: flex;
+  flex: 1;
+  align-items: stretch;
 }
 
 .history-text-column {
-    flex: 1; /* Each column takes up equal space */
-    display: flex; /* Make each text column a flex container */
-    flex-direction: column; /* Stack text within each column */
-    justify-content: center; /* Vertically center text within columns */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .left-column {
-    text-align: left; /* Align text in the left column to the left */
+  text-align: left;
 }
 
 .right-column {
-    text-align: right; /* Align text in the right column to the right */
+  text-align: right;
 }
 
 .history-image {
-    /* No changes needed here, but you can adjust image size if you want */
-}
-
-/* Media query for responsiveness (adjust breakpoint as needed) */
-@media (max-width: 768px) {
-    .history-content {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center horizontally */
-    }
-    .history-text-columns {
-        flex-direction: column; /* Stack text columns vertically */
-        gap: 20px; /* Add gap between text columns when stacked */
-    }
-    .left-column, .right-column { /* Center text within columns on small screens */
-        text-align: center;
-    }
-    .history-image {
-        margin: 20px 0; /* Add top and bottom margins, remove left/right */
-    }
+  /* You can adjust image size here */
+  max-width: 300px; /* Example */
+  height: auto; /* Example */
 }
 
 /* Adventures Section Styles */
 .adventures {
-    padding: 40px;
+  padding: 40px;
 }
 
 .adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  text-align: center; /* Center the content within each grid item */
 }
 
 .adventure-grid figure {
-    margin: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
 }
 
 .adventure-grid img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.adventure-grid figcaption {
+  margin-top: 10px; /* Add some space between image and caption */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-media {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
+
+/* Media query for responsiveness (adjust breakpoint as needed) */
+@media (max-width: 768px) {
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .inline-image {
+      max-width: 150px;
+      margin: 0 auto 10px;
