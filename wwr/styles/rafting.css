@@ -38,7 +38,7 @@ nav ul { /* Style the ul inside the nav */
 }
 
 nav li {
-    margin-left: 1rem; /* Space between nav items */
+    margin-right: 1rem; /* Space between nav items */
 }
 
 nav a {
