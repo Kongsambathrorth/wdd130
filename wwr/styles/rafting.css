@@ -1,4 +1,11 @@
+/* styles.css */
+@import url("header.css");
+@import url("footer.css");
 
+/* Your other CSS rules */
+body {
+  font-family: 'Roboto', sans-serif; /* Use the Google Font */
+}
 
 body {
     font-family: Arial, sans-serif;
