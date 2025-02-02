@@ -1,46 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
 header {
-	margin: 1rem auto;
-	display: grid;
-	grid-template-columns: 120px 1fr 1fr;
-	align-items: center;
-	border-bottom: 1px solid #ccc;
-	max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
 
-.logo img {
-	margin: 0 0.25rem 0 1rem;
-	width: 64px;
-	height: auto;
+header img {
+    width: 50px;
+    height: 50px;
 }
 
-h1 {
-	font-size: 2rem;
-	font-family: Acme, Arial, sans-serif;
+header h1 {
+    margin: 0;
+    padding: 0 10px;
 }
 
-.navigation {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding: 0;
-	font-family: Arial, sans-serif;
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.navigation li {
-	flex: 1 1 auto;
+nav ul li {
+    margin: 0 10px;
 }
 
-.navigation a {
-	display: block;
-	color: navy;
-	padding: 20px;
-	text-decoration: none;
-	font-size: 1.2rem;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-.navigation a:hover {
-	color: tomato;
-	font-weight: 700;
-	text-decoration: underline;
+main {
+    padding: 20px;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.adventures-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.adventures-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .social-media img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
