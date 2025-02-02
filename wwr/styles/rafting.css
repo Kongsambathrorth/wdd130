@@ -45,7 +45,7 @@ header {
 	margin: 1rem auto;
 	display: grid;
 	grid-template-columns: 120px 1fr 1fr;
-	align-items: center;
+	align-items: left;
 	border-bottom: 1px solid #ccc;
 	max-width: 1000px;
 }
