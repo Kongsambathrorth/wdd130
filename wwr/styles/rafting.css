@@ -95,3 +95,15 @@ footer {
     height: 30px;
     margin-left: 10px;
 }
+
+.welcome-section {
+    text-align: center; /* Center the heading */
+    padding: 20px;
+}
+
+.inline-image {
+    float: left; /* Image on the left, text wraps around */
+    margin: 0 15px 10px 0; /* Add spacing around the image */
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+}
