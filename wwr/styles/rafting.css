@@ -1,165 +1,221 @@
-/* styles.css */
-
+/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Use the Google Font */
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-header-content {
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 0em  ;
+ 
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #635e5e;
-    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.logo img {
-            max-height: 60px;
-}
-
-nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end; /* Align navigation items to the right */
-        }
-        
-nav ul li {
-            margin-left: 20px;
-        }
 nav {
-            padding-right: 20px; /* Add right padding to nav */
-        }
-nav a {
-            text-decoration: none;
-            color: black;
-        }
-nav a:hover {
-            color: blue; /* Change color on hover */
-        }
-
-.container {
-    padding: 20px;
-}
-
-main {
-    padding: 20px;
-}
-
-.history-grid {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 20px;
+    display: flex;
     align-items: center;
 }
 
-.adventures {
-    padding: 40px; /* Add padding around the adventures section */
-}
 
-.adventure-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Increased gap for better spacing */
-    text-align: center; /* Center content horizontally within grid items */
-}
 
-.adventure-grid figure {
+
+nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    display: flex; /* Use flexbox for vertical centering */
-    flex-direction: column;
-    align-items: center; /* Center content horizontally in figure */
+    display: flex;
+    gap: 1em;
+
 }
 
-.adventure-grid img {
-    max-width: 100%; /* Make images responsive */
+nav ul li {
+    margin: 0%;
+    
+}
+
+.menu-bar{
+  
+    align-items: left;
+
+}
+
+.logo {
+    width: fit-content;
+    width: 80px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+main {
+    padding: 0em 0em 0em 0em;
+}
+
+.section-banner {
+    margin-top: 0em;
+}
+
+.banner-image img {
+    width: 100%;
     height: auto;
 }
 
-.adventure-grid figcaption {
-    margin-top: 10px; /* Space between image and caption */
+.hero-content {
+    text-align: left;
+    padding: 2em 0;
+    font-size: large;
 }
 
-footer {
-    background-color: #333; /* Check contrast */
-    color: white; /* Check contrast */
-    padding: 10px;
-    text-align: right;
+.hero-content img.inline-image {
+    float: left;
+    margin-right: 1em;
+    height: 150px;
+    width: auto;
+}
+
+.history, .services {
+    padding: 2em 0;
+}
+
+.history-content, .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.history-text-column, .history-image {
+    flex: 2 2 45%;
+    min-width: 300px;
+    text-align: left ;
+    font-size: large;
+
+
+}
+
+   
+.service-cards .card {
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.service-cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #555;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.footer-content p,
+.footer-content a {
+    margin: 0 1em;
+    color: #fff;
 }
 
 .social-media {
     display: flex;
-    justify-content: flex-end;
+    gap: 1em;
 }
 
 .social-media img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+    height: 24px; /* Adjust the size as needed */
+    width: auto;
 }
 
-.welcome-section {
-    text-align: center; /* Center the heading */
-    padding: 20px;
-}
-
-
-.inline-image {
-    float: right; /* Changed to right */
-    margin: 0 0 10px 15px; /* Adjusted margin */
-    max-width: 200px;
-    height: auto;
-}
-
-
-section {
-    margin-bottom: 20px; /* Adds 20px of space below each section */
-}
-
-section {
-  padding-bottom: 20px; /* Adds 20px of space inside the bottom of each section */
-}
-
-
-.address, .map, .employee-profiles, .contact-form {
-    margin-bottom: 20px;
-}
-.employee-profiles img {
-    width: 100px;
-    height: 100px;
-    display: block;
+.container {
+    max-width: 960px;
     margin: 0 auto;
-}
-.employee-profiles div {
-    text-align: center;
-    margin-top: 10px;
-}
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-}
-.contact-form input[type="radio"] {
-    width: auto;
-}
-.contact-form input[type="submit"] {
-    width: auto;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    padding: 0 20px;
 }
 
-.custom-link {
-            color: white; /* Custom link color */
-            text-decoration: none; /* Remove underline */
-            font-size: 18px; /* Change font size */
-            font-weight: bold; /* Change font weight */
-            padding: 10px; /* Add padding */
-            border-radius: 5px; /* Add rounded corners */
-        }
-.custom-link:hover {
-            color: #FFD700; /* Change color on hover */
-        }
+section { /* Style for sections */
+    margin-bottom: 30px; /* Space between sections */
+}
+
+.address p {
+    margin-bottom: 10px;
+}
+
+.map iframe {
+    width: 100%; /* Make map responsive */
+    height: 450px;
+}
+
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.employee {
+    text-align: center;
+}
+
+.employee img {
+    max-width: 150px;
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px;
+}
+
+.employee-info { /* Style employee info */
+    font-weight: bold;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.radio-group {
+    margin-bottom: 1
+}
