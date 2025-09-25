@@ -38,7 +38,7 @@ aside {
 
 
 
-.aside-img {
+aside-img {
     width: 200px;
     height: auto;
 }
@@ -58,7 +58,7 @@ footer p {
     color: black;
 }
 
-.main-img {
+main-img {
     width: 200px; 
     height: auto; 
     
