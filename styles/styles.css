@@ -27,7 +27,7 @@ h1 {
    This combines all required properties into one block. */
 main img {
     /* The rule must have declarations for width, height, border, padding, and box-shadow.  */
-    width: 200px;
+    width: 150px;
     height: auto;
     border: 5px solid #ccc; /* Example border */
     padding: 10px;          /* Example padding */
@@ -50,7 +50,7 @@ aside {
 /* === aside img Rule Fix === */
 aside img {
     /* The aside img rule must contain a width of 200px and height of auto.  */
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 
