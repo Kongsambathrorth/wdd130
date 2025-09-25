@@ -33,7 +33,7 @@ aside {
     text-align: center; 
 }
 
-aside img {
+.aside img {
     width: 200px;
     height: auto;
 }
@@ -54,7 +54,7 @@ footer p {
 }
 
 
-main img {
+.main img {
     width: 150px; 
     height: auto;
 
