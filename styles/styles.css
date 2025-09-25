@@ -1,68 +1,83 @@
+/* CORRECTED CSS FILE based on WDD 130 Page Audit Tool Report */
+
+/* === nav Rule and nav a Rule Fixes (from previous steps) === */
+nav {
+    background-color: #333; /* Required: background-color and padding  */
+    padding: 10px;
+}
+
+nav a {
+    color: white; /* Required: color, padding, and display: block  */
+    padding: 10px 15px;
+    display: block;
+}
+
+/* === main Rule Fix === */
 main {
-    max-width: 840px;
+    max-width: 840px; /* Required: max-width declaration [cite: 144] */
 }
 
-main img {
-    max-width: 150px;
-    height: auto;
-}
-
+/* === h1 Rule Fix === */
 h1 {
-    color: #333; 
+    color: #333; /* Required: h1 { structure and color: declaration  */
+}
 
-/
-    width: 200px; 
+/* === main img Rule Fix === */
+/* NOTE: The existing 'main img' rule in your file was broken up by a comment/code block. 
+   This combines all required properties into one block. */
+main img {
+    /* The rule must have declarations for width, height, border, padding, and box-shadow.  */
+    width: 200px;
     height: auto;
-    border: 5px solid #ccc; 
-    padding: 10px;          
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    border: 5px solid #ccc; /* Example border */
+    padding: 10px;          /* Example padding */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Example box-shadow */
 }
 
-aside img {
-    max-width: 150px;
-    height: auto;
-}
-
-p {
-    padding: 0;
-}
-
-h1, h2 {
-    margin-top: 0;
-    color: black;
-}
-navbar {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}   
-
+/* === aside Rule Fix === */
 aside {
+    /* The aside rule must contain width, margin, border, padding, 
+       background-color, and color.  */
     width: 20rem ;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2); 
     padding: 1rem;
     background-color: #eee;
     color: #333;
-    text-align: center;
+    text-align: center; /* This property was also in the example/previous code */
 }
 
+/* === aside img Rule Fix === */
+aside img {
+    /* The aside img rule must contain a width of 200px and height of auto.  */
+    width: 200px;
+    height: auto;
+}
+
+/* === paragraph p Rule Fix === */
+p {
+    padding: 0; /* The p rule must have a padding: 0 declaration.  */
+}
+
+/* === footer Rule Fix === */
 footer {
+    /* The footer rule must contain declarations for margin-top, border-top, 
+       and text-align to the center.  */
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
 }
 
-nav {
-    /* Fixes the first error */
-    background-color: #333; /* Example color */
-    padding: 10px;          /* Example padding */
+/* Retaining the h1, h2 group from your previous code - no specific errors related to this */
+h1, h2 {
+    margin-top: 0;
+    color: black; /* Note: The h1 color is overridden by the h1 rule above */
 }
----
-nav a {
-    /* Fixes the second error */
-    color: white;           /* Example color */
-    padding: 10px 15px;     /* Example padding */
-    display: block;         /* Must be 'display: block' specifically */
-}
+
+/* NOTE: The 'navbar' rule in your original file is not necessary, as the 'nav' rule is used */
+/* navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+} */
