@@ -22,8 +22,6 @@ h1 {
     color: #333; 
 }
 
-
-
 aside {
     width: 200px;
     height: auto;
@@ -35,10 +33,7 @@ aside {
     text-align: center; 
 }
 
-
-
-
-aside-img {
+aside img {
     width: 200px;
     height: auto;
 }
@@ -58,8 +53,10 @@ footer p {
     color: black;
 }
 
-main-img {
+.main-img {
     width: 200px; 
-    height: auto; 
-    
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
