@@ -7,10 +7,10 @@
 --body-font: Arial, Helvetica, sans-serif;
 }
 
-header {
 
- background-color: rgb(158, 199, 199);
- color:black
+header {
+background-color: rgb(158, 199, 199);
+color:black  
 }
 
 * {
