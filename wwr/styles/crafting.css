@@ -8,7 +8,7 @@
 }
 
 header {
- /* FIXED: Removed 'var' keyword */
+
  background-color: rgb(158, 199, 199);
  color:black
 }
@@ -21,7 +21,6 @@ header {
 
 body {
  font-family: var(--body-font);
- /* FIXED: Corrected syntax to single, proper variable call */
  color: var(--accent1-color);
 }
 
@@ -36,7 +35,7 @@ h1, h2 {
 }
 
 nav, p, section, article {
- /* FIXED: Removed extra semicolon */
+
  margin: 16px;
  padding: 8px;
 }
@@ -57,7 +56,6 @@ height: auto;
 
 h1 {
  position: absolute;
- /* FIXED: Changed position to center vertically */
  top: 50%; 
  transform: translateY(-50%); /* For perfect vertical centering */
  width: 100%;
