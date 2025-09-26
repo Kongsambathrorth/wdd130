@@ -8,41 +8,41 @@
 }
 
 header {
-  /* FIXED: Removed 'var' keyword */
-  background-color: rgb(158, 199, 199);
-  color:black
+ /* FIXED: Removed 'var' keyword */
+ background-color: rgb(158, 199, 199);
+ color:black
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
 
 body {
-  font-family: var(--body-font);
-  /* FIXED: Corrected syntax to single, proper variable call */
-  color: var(--accent1-color);
+ font-family: var(--body-font);
+ /* FIXED: Corrected syntax to single, proper variable call */
+ color: var(--accent1-color);
 }
 
 header, main, footer {
-  width: 840px;
-  margin: 0 auto;
+ width: 840px;
+ margin: 0 auto;
 }
 
 h1, h2 {
-  font-family:var(--heading-font);
-  color: var(--primary-color);
+ font-family:var(--heading-font);
+ color: var(--primary-color);
 }
 
 nav, p, section, article {
-  /* FIXED: Removed extra semicolon */
-  margin: 16px;
-  padding: 8px;
+ /* FIXED: Removed extra semicolon */
+ margin: 16px;
+ padding: 8px;
 }
 
 .socialmedia a {
-  text-decoration: none;
+ text-decoration: none;
 }
 
 .hero {
@@ -56,14 +56,19 @@ height: auto;
 }
 
 h1 {
-  position: absolute;
-  /* FIXED: Changed position to center vertically */
-  top: 50%; 
-  transform: translateY(-50%); /* For perfect vertical centering */
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
-  color: #fff;
+ position: absolute;
+ /* FIXED: Changed position to center vertically */
+ top: 50%; 
+ transform: translateY(-50%); /* For perfect vertical centering */
+ width: 100%;
+ padding: 16px;
+ text-align: center;
+ opacity: 0.7;
+ background-color: var(--accent1-color);
+ color: #fff;
 }
+
+.hero article img {
+  float: right;
+  width:125px;
+} 
