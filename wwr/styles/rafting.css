@@ -196,22 +196,33 @@ hr {
 
 
 /* FOOTER */
-
+/* Updated CSS for Center Alignment */
 .main-footer {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 20px;
     margin-top: 40px;
     background-color: var(--light-grey);
-    text-align: center;
     border-top: 1px solid var(--border-color);
     display: flex;
-    justify-content: space-between;
+    /* Center the content horizontally */
+    justify-content: center; 
     align-items: center;
+    /* Stack content vertically if space is tight, good practice */
+    flex-wrap: wrap; 
+    gap: 15px; /* Adds space between the text and social links */
 }
 
+/* We need to remove flex-grow from the paragraph so it doesn't push content away */
 .main-footer p {
-    flex-grow: 1;
+    flex-grow: 0; 
+    text-align: center; /* Ensures the text inside the paragraph is centered */
+}
+
+/* Ensure the social links are spaced out properly when centered */
+.social-links {
+    display: flex;
+    gap: 10px;
 }
 
 .social-links {
@@ -220,8 +231,8 @@ hr {
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     background-color: var(--text-color);
     color: white;
     display: flex;
