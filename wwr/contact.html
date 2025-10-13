@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="./styles/rafting.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-placeholder">
+            <img src="./images/logo.png" alt="Company Logo" class="logo-image">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Trips</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Using the .hero-section class for the main company info -->
+        <section class="hero-section">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street, Kolob, California</p>
+            <p class="info-contact">+1 999 999 9999</p>
+            <p class="info-contact">info@raftadventures.com</p>
+            <div class="hero-content">
+                <!-- Content can go here if needed, but the main info is above -->
+            </div>
+        </section>
+        
+        <hr>
+
+        <!-- Combining the Map and Form into a custom grid section -->
+        <section class="contact-grid">
+            
+            <!-- Left Column: Map Placeholder -->
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <svg class="map-pin" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 1.5c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM12 18a6 6 0 100-12 6 6 0 000 12zM12 17a5 5 0 100-10 5 5 0 000 10zM12 8.5a.5.5 0 100-1 .5.5 0 000 1z" clip-rule="evenodd" /></svg>
+                </div>
+            </div>
+            
+            <!-- Right Column: Contact Form -->
+            <div class="contact-form-card">
+                <form class="form-content">
+                    <h2 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">Book Your Adventure</h2>
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" placeholder="John Doe" class="form-input">
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" placeholder="john.doe@email.com" class="form-input">
+                    </div>
+
+                    <!-- Message Purpose Radio Buttons -->
+                    <div class="radio-group-container">
+                        <label class="form-label">Purpose</label>
+                        <div class="radio-group-content">
+                            <label class="radio-label">
+                                <input type="radio" name="purpose" value="general" class="radio-input" checked>
+                                <span>Inquiry</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="purpose" value="reservation" class="radio-input">
+                                <span>Reservation</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="purpose" value="suggestion" class="radio-input">
+                                <span>Suggestion</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div class="form-group message-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" rows="4" placeholder="Type your message here..." class="form-input message-textarea"></textarea>
+                    </div>
+                    
+                    <!-- Newsletter Checkbox -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" class="checkbox-input">
+                        <label for="newsletter">Subscribe to our quarterly newsletter</label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </section>
+        
+        <hr>
+
+        <!-- Using the .adventure-section and .gallery-grid for the team profiles -->
+        <section class="adventure-section">
+            <h2>Our Expert Team</h2>
+            
+            <!-- Using the .gallery-grid for team profiles -->
+            <div class="gallery-grid">
+                
+                <!-- Profile 1 -->
+                <div class="gallery-item">
+                     <img src="https://placehold.co/150x150/5d5a6a/fff?text=Guide+1" alt="Guide 1" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
+                    <p class="profile-name">Liam "The Rock" K.</p>
+                    <p class="profile-role">Lead Guide</p>
+                </div>
+                
+                <!-- Profile 2 -->
+                <div class="gallery-item">
+                    <img src="https://placehold.co/150x150/5d5a6a/fff?text=Guide+2" alt="Guide 2" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
+                    <p class="profile-name">Sarah "Splash" W.</p>
+                    <p class="profile-role">Safety Officer</p>
+                </div>
+
+                <!-- Profile 3 -->
+                <div class="gallery-item">
+                    <img src="https://placehold.co/150x150/5d5a6a/fff?text=Guide+3" alt="Guide 3" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
+                    <p class="profile-name">Marcus "Mighty" J.</p>
+                    <p class="profile-role">Operations Specialist</p>
+                </div>
+            </div>
+        </section>
+        
+    <footer class="main-footer">
+    <p>Footer Content including Social Media Icons/Links</p>
+    <div class="social-links">
+        <img src="./images/facebook.svg" alt="Facebook icon">
+        <img src="./images/instagram.svg" alt="Instagram icon">
+        <img src="./images/twitter.svg" alt="Twitter icon">
+    </div>
+</footer>
+
+</body>
+</html>
