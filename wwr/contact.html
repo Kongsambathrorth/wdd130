@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sambathrorth" />
-    <meta name="description"content="This is a rafting services." />
-    <title>contact and white rafting company</title>
+    <meta name="description"content="Contact page for a white water rafting service." />
+    <title>Contact Us | White Water Rafting Company</title>
     <link rel="stylesheet" href="./styles/rafting.css">
 </head>
 <body>
@@ -16,130 +15,108 @@
             <img src="./images/logo.png" alt="Company Logo" class="logo-image">
         </div>
         <nav class="main-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Trips</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+             <ul>
+                 <li><a href="./index.html">Home</a></li>
+                 <li><a href="./about.html">About Us</a></li>
+                 <li><a href="./trip.html">Trips</a></li>
+                 <li><a href="./contact.html">Contact Us</a></li>
+             </ul>
         </nav>
     </header>
 
     <main>
-<!-- Using the .hero-section class for the main company info -->
-        <section class="hero-section">
-            <h1>White Water Rafting Company</h1>
-            <p>No 29, Street 29, Takhmau town, Cambodia</p>
-            <p class="info-contact">+855 999 9999</p>
-            <p class="info-contact">kongsamabathrorth@gmail.com</p>
-            <div class="hero-content">
-                <!-- Content can go here if needed, but the main info is above -->
-            </div>
-        </section>
-        
-        <!-- Combining the Map and Form into a custom grid section -->
-        <section class="contact-grid">
-            
-            <!-- Left Column: Map Placeholder -->
-            <div class="map-placeholder">
-                <div class="map-content">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7821.634523902492!2d104.9883844!3d11.42080590000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skh!4v1760376035899!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            
-            <!-- Right Column: Contact Form -->
-            <div class="contact-form-card">
-                <form class="form-content">
-                    <h2 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem;">Book Your Adventure</h2>
-                    <!-- Name Field -->
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" placeholder="John Doe" class="form-input">
-                    </div>
+        <section id="contact-page" class="page-content">
+             <section class="hero-section">
+                 <h1>White Water Rafting Company</h1>
+                 
+                 <div class="contact-info-grid">
+                     <div class="company-info">
+                         <h2>Our Info</h2>
+                         <p class="info-contact">No 29, Street 29, Takhmau town, Cambodia</p>
+                         <p class="info-contact">+855 999 9999</p>
+                         <p class="info-contact">kongsambathrorth@gmail.com</p>
+                     </div>
+                     <div class="location-map">
+                         <iframe 
+                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12440.000000!2d104.990000!3d11.490000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDI5JzI0LjAiTiAxMDTCsDU5JzI0LjAiRQ!5e0!3m2!1sen!2skh!4v1686737380436!5m2!1sen!2skh"
+                             width="100%" height="400" 
+                             style="border:0;" 
+                             allowfullscreen="" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer-when-downgrade"
+                             title="Map of our location in Takhmau, Cambodia">
+                         </iframe>
+                     </div>
+                 </div>
+             </section>
 
-                    <!-- Email Field -->
-                    <div class="form-group">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" placeholder="john.doe@email.com" class="form-input">
-                    </div>
+             <section class="contact-form-section">
+                 <h2>Get in Touch</h2>
+                 <form action="thanks.html" method="post" id="contact-form">
+                     <div class="form-group">
+                         <label for="username">Name:</label>
+                         <input type="text" id="username" name="username" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="email">Email:</label>
+                         <input type="email" id="email" name="email" required>
+                     </div>
+                     
+                     <div class="form-group">
+                         <label for="purpose">Purpose of Message:</label>
+                         <select id="purpose" name="purpose">
+                             <option value="general">General Inquiry</option>
+                             <option value="reservation">Reservation Question</option>
+                             <option value="suggestion">Website Suggestion</option>
+                         </select>
+                     </div>
 
-                    <!-- Message Purpose Radio Buttons -->
-                    <div class="radio-group-container">
-                        <label class="form-label">Purpose</label>
-                        <div class="radio-group-content">
-                            <label class="radio-label">
-                                <input type="radio" name="purpose" value="general" class="radio-input" checked>
-                                <span>Inquiry</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="purpose" value="reservation" class="radio-input">
-                                <span>Reservation</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="purpose" value="suggestion" class="radio-input">
-                                <span>Suggestion</span>
-                            </label>
-                        </div>
-                    </div>
+                     <div class="form-group radio-group">
+                         <label>Preferred Contact Method:</label>
+                         <input type="radio" id="email_contact" name="contact_method" value="email" checked>
+                         <label for="email_contact">Email</label>
+                         <input type="radio" id="phone_contact" name="contact_method" value="phone">
+                         <label for="phone_contact">Phone</label>
+                     </div>
 
-                    <!-- Message Textarea -->
-                    <div class="form-group message-group">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" rows="4" placeholder="Type your message here..." class="form-input message-textarea"></textarea>
-                    </div>
-                    
-                    <!-- Newsletter Checkbox -->
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="newsletter" class="checkbox-input">
-                        <label for="newsletter">Subscribe to our quarterly newsletter</label>
-                    </div>
+                     <div class="form-group">
+                         <label for="message">Message:</label>
+                         <textarea id="message" name="message" rows="5" required></textarea>
+                     </div>
+                     <button type="submit" class="button">Send Message</button>
+                 </form>
+             </section>
 
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">
-                        Submit Inquiry
-                    </button>
-                </form>
-            </div>
-        </section>
-        
-        <hr>
+             <section class="team-profiles-section">
+                 <h2>Our Team of Guides</h2>
+                 <div class="team-gallery">
+                     <div class="gallery-item">
+                          <img src="./images/employee2.png" alt="Guide Liam K." class="team-profile-img">
+                         <p class="profile-name">Liam "The Rock" K.</p>
+                         <p class="profile-role">Lead Guide</p>
+                     </div>
+                     
+                     <div class="gallery-item">
+                         <img src="./images/employee3.png" alt="Guide Sarah W." class="team-profile-img">
+                         <p class="profile-name">Sarah "Splash" W.</p>
+                         <p class="profile-role">Safety Officer</p>
+                     </div>
 
-        <!-- Using the .adventure-section and .gallery-grid for the team profiles -->
-        <section class="adventure-section">
-            <h2>Our Expert Team</h2>
-            
-            <!-- Using the .gallery-grid for team profiles -->
-            <div class="gallery-grid">
-                
-                <!-- Profile 1 -->
-                <div class="gallery-item">
-                     <img src="./images/employee2.png" alt="Guide 1" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
-                    <p class="profile-name">Liam "The Rock" K.</p>
-                    <p class="profile-role">Lead Guide</p>
-                </div>
-                
-                <!-- Profile 2 -->
-                <div class="gallery-item">
-                    <img src="./images/employee3.png" alt="Guide 2" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
-                    <p class="profile-name">Sarah "Splash" W.</p>
-                    <p class="profile-role">Safety Officer</p>
-                </div>
-
-                <!-- Profile 3 -->
-                <div class="gallery-item">
-                    <img src="./images/employee2.png" alt="Guide 3" style="border-radius: 50%; max-width: 150px; margin: 0 auto 10px;">
-                    <p class="profile-name">Marcus "Mighty" J.</p>
-                    <p class="profile-role">Operations Specialist</p>
-                </div>
-            </div>
+                     <div class="gallery-item">
+                         <img src="./images/employee2.png" alt="Guide Marcus J." class="team-profile-img">
+                         <p class="profile-name">Marcus "Mighty" J.</p>
+                         <p class="profile-role">Operations Specialist</p>
+                     </div>
+                 </div>
+             </section>
         </section>
     </main>
     <footer class="main-footer">
-    <p>Footer Content including Social Media Icons/Links</p>
+    <p>© 2025 White Water Rafting Company | <a href="./wireframe.html">Wireframe Link</a> | Sambathrorth</p>
     <div class="social-links">
-        <img src="./images/facebook.svg" alt="Facebook icon">
-        <img src="./images/instagram.svg" alt="Instagram icon">
-        <img src="./images/twitter.svg" alt="Twitter icon">
+        <a href="https://facebook.com"><img src="./images/facebook.svg" alt="Facebook link icon"></a>
+        <a href="https://instagram.com"><img src="./images/instagram.svg" alt="Instagram link icon"></a>
+        <a href="https://twitter.com"><img src="./images/twitter.svg" alt="Twitter link icon"></a>
     </div>
     </footer>
 
