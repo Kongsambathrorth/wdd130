@@ -34,7 +34,7 @@ main {
 
 h1, h2 {
     font-family: var(--heading-font);
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
     
 }
 
@@ -42,7 +42,6 @@ h1, h2 {
 .section-container h2 {
    
     color: var(--light-text);
-    text-align: center;
     padding: 1rem 0;
     margin: 1rem 0 0 0; 
     width: 100%;
@@ -71,7 +70,6 @@ nav, p, section, article {
 .main-header {
     background-color: var(--dark-background); 
     padding: 0.5rem 0;
-    position: sticky;
     top: 0;
     z-index: 10;
 }
@@ -206,7 +204,7 @@ nav, p, section, article {
 /* --- Footer & Social Media --- */
 
 .main-footer {
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
     color: var(--light-text);
     padding: 1.5rem 0;
 }
