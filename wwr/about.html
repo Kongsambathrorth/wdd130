@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - White Water Rafting Co.</title>
-    <!-- Meta Description -->
+
     <meta name="description"
         content="Discover the thrilling history, passionate mission, and dedicated team behind White Water Rafting Co. Your ultimate river adventure starts here!">
-    <!-- Meta Author -->
+
     <meta name="author" content="White Rafting company">
 
-    <!-- Link to custom styles (pure CSS) -->
+
     <link rel="stylesheet" href="styles/rafting.css">
 
 </head>
@@ -24,7 +24,7 @@
 
             <!-- Logo -->
             <a href="index.html" class="logo-link">
-                <!-- FIX APPLIED HERE: The onerror attribute is now properly closed with a quote and a closing bracket. -->
+
                 <img src="images/z-splash.png" alt="White Water Rafting Co. Logo" class="logo-img"
                     onerror="this.onerror=null; this.src='https://placehold.co/80x80/264653/ffffff?text=LOGO';" />
                 <span class="logo-text">WWR Co.</span>
@@ -45,37 +45,48 @@
     <!-- MAIN CONTENT -->
     <main>
         <div class="hero">
-            <img src="images/hero_transparency_1024.jpg" alt="Rafting team paddling down a river"
+            <!-- Large Hero Image -->
+            <img src="images/hero_transparency_1024.jpg" alt="Rafting team paddling down a river" class="hero-main-img"
                 onerror="this.onerror=null; this.src='https://placehold.co/840x350/264653/ffffff?text=Hero+Image';">
-            <h1>Rapids! Make Memories!</h1>
-            <article>
-                <img src="images/hero.jpg" alt="A small raft going through whitewater rapids"
-                    onerror="this.onerror=null; this.src='https://placehold.co/125x125/e9c46a/264653?text=Client';">
-                <p> The sport of whitewater rafting was in its infant stages in 1962. That spring George Armstrong
-                    placed a small raft into
-                    the Stanislaus River near Yosemite National Park and ventured into the unknown. He lived to tell
-                    about it and fell in
-                    love with rivers and rafting.</p>
-            </article>
 
+            <!-- FLOATING CONTENT WRAPPER (Handles the positioning) -->
+            <div class="hero-content-wrapper">
+                <h1>Rapids! Make Memories!</h1>
+                <article>
+                    <img src="images/hero.jpg" alt="A small raft going through whitewater rapids" class="article-img"
+                        onerror="this.onerror=null; this.src='https://placehold.co/125x125/e9c46a/264653?text=Client';">
+
+                    <p>Our goal is to provide you with the best
+                        experience possible. We have been providing unforgettable experiences for over 30 years. We are
+                        a family owned and operated business that is dedicated to providing you with the best experience
+                        possible. We have a team of experienced guides that are dedicated to providing you with.
+                    </p>
+
+                </article>
+            </div>
         </div>
 
-        <section>
-            <h2> History</h2>
-            <p> More than 60 years of rafting on California rivers is enough time to experience anything that can happen
-                on a whitewater
-                rafting trip.
+        <!-- History Section -->
+        <section class="section-container">
+            <h2 class="section-title"> History</h2>
+            <div class="section-content">
+                <p> More than 60 years of rafting on California rivers is enough time to experience anything that can
+                    happen
+                    on a whitewater rafting trip.
 
-                Organizing over 40,000 trips is the best way to learn how to put on amazing rafting adventures! Taking
-                450,000 guests
-                down rivers is a great way to learn how to care for folks as you lead them through river canyons. </p>
-
+                    Organizing over 40,000 trips is the best way to learn how to put on amazing rafting adventures!
+                    Taking
+                    450,000 guests down rivers is a great way to learn how to care for folks as you lead them through
+                    river canyons. </p>
+            </div>
         </section>
 
-        <section>
-            <h2> Adventure Awaits You!</h2>
+        <!-- Adventure Awaits Section -->
+        <section class="section-container">
+            <h2 class="section-title"> Adventure Awaits You!</h2>
         </section>
     </main>
+
     <!-- FOOTER -->
     <footer class="main-footer">
         <div class="footer-container content-wrapper">
@@ -88,17 +99,17 @@
             <!-- Social Media Links -->
             <nav class="socialmedia">
                 <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.svg" alt="Facebook Icon"
+                    <img src="images/facebook.svg" alt="Facebook Icon" class="social-icon"
                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/1e40af/ffffff?text=FB';">
                 </a>
 
                 <a href="https://twitter.com" target="_blank">
-                    <img src="images/twitter.svg" alt="X Icon"
+                    <img src="images/twitter.svg" alt="X Icon" class="social-icon"
                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/000000/ffffff?text=X';">
                 </a>
 
                 <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="Instagram Icon"
+                    <img src="images/instagram.png" alt="Instagram Icon" class="social-icon"
                         onerror="this.onerror=null; this.src='https://placehold.co/30x30/f43f5e/ffffff?text=IG';">
                 </a>
             </nav>

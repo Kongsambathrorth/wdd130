@@ -35,27 +35,36 @@ main {
 }
 
 
-
-
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
 }
 
 
-.section-title, h2 {
+.section-container h2 {
     background-color: var(--dark-background); 
     color: var(--light-text);
     text-align: center;
     padding: 1rem 0;
-    margin-top: 1rem;
-    margin-bottom: 0;
+    margin: 1rem 0 0 0; 
+    width: 100%;
 }
+.section-content {
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+
+
+.hero h1 {
+    color: #fff;
+}
+
 
 nav, p, section, article {
     margin: 1rem 0; 
     padding: 0; 
 }
+
 
 /* --- Header & Navigation --- */
 
@@ -118,52 +127,68 @@ nav, p, section, article {
     margin-bottom: 2rem;
 }
 
-.hero img {
+.hero-main-img { 
     display: block;
     width: 100%;
     height: auto; 
 }
-   
+    
 
-.hero h1 {
+.hero-content-wrapper {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     width: 100%;
-    padding: 2rem;
+    height: 100%; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.hero h1 {
+    position: static;
+    width: 100%;
+    padding: 1rem;
     text-align: center;
     background-color: rgba(38, 70, 83, 0.8); 
     color: #fff;
     font-size: 2.5rem;
     margin: 0;
+    align-self: flex-start;
 }
+
 
 .hero article {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(38, 70, 83, 0.8);
-    color: #fff;
-    padding: 1rem;
+   
+    width: 100%; 
     display: flex;
-    gap: 1rem;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
     align-items: center;
+    background-color: rgba(46, 79, 92, 0.8); 
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 0; 
+    z-index: 5; 
+    margin: 0; 
+    
 }
 
-.hero article img {
-  
-    float: none; 
-    width: 125px; 
+/* Styling for the small image inside the article */
+.hero article .article-img {
+    width: 125px;
     height: auto;
-    object-fit: cover;
-    border: 4px solid var(--accent2-color);
+    margin-left: 1rem;
+    flex-shrink: 0;
 }
 
+/* Ensure paragraph content respects the flex layout */
 .hero article p {
     margin: 0;
     padding: 0;
+    flex-grow: 1;
 }
 
 
@@ -196,12 +221,12 @@ nav, p, section, article {
     gap: 1rem;
 }
 
-.socialmedia img {
+.socialmedia .social-icon {
     width: 30px; 
     height: 30px;
     transition: transform 0.3s ease;
 }
 
-.socialmedia img:hover {
+.socialmedia .social-icon:hover {
     transform: scale(1.1);
 }
