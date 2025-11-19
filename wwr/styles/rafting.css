@@ -1,10 +1,8 @@
 :root {
-    --primary-color: hwb(120 2% 77%); 
-    --accent1-color: #264653; 
+    --primary-color: #055a05; 
+    --secondary-color: #f4a261; 
+    --accent1-color: #264653;
     --accent2-color: #e9c46a; 
-    --dark-background: #264653; 
-    --light-text: #ffffff; 
-    
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -37,16 +35,19 @@ main {
 
 h1, h2 {
     font-family: var(--heading-font);
+     background-color: var(--primary-color)
+    
 }
 
 
 .section-container h2 {
-    background-color: var(--dark-background); 
+   
     color: var(--light-text);
     text-align: center;
     padding: 1rem 0;
     margin: 1rem 0 0 0; 
     width: 100%;
+    color: white;
 }
 .section-content {
     margin: 1rem 0;
@@ -80,6 +81,7 @@ nav, p, section, article {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--primary-color);
 }
 
 .logo-link {
@@ -108,7 +110,7 @@ nav, p, section, article {
 }
 
 .nav-link {
-    color: var(--light-text);
+    color: white;
     text-decoration: none;
     padding: 0.5rem 0.25rem;
     transition: color 0.3s ease;
@@ -140,6 +142,7 @@ nav, p, section, article {
     left: 0;
     width: 100%;
     height: 100%; 
+    background-color: var(--primary-color);
 
     display: flex;
     flex-direction: column;
@@ -156,6 +159,7 @@ nav, p, section, article {
     font-size: 2.5rem;
     margin: 0;
     align-self: flex-start;
+      background-color: var(--primary-color);
 }
 
 
@@ -173,6 +177,7 @@ nav, p, section, article {
     border-radius: 0; 
     z-index: 5; 
     margin: 0; 
+      background-color: var(--primary-color);
     
 }
 
@@ -185,7 +190,7 @@ nav, p, section, article {
     float: right;
 }
 
-.hero. article img{
+.hero article img{
     float: right;
     width: 125px;
 
@@ -202,7 +207,7 @@ nav, p, section, article {
 /* --- Footer & Social Media --- */
 
 .main-footer {
-    background-color: var(--dark-background);
+    background-color: var(--primary-color)
     color: var(--light-text);
     padding: 1.5rem 0;
 }
@@ -211,10 +216,12 @@ nav, p, section, article {
     display: flex;
     justify-content: space-between;
     align-items: center;
+     background-color: var(--primary-color)
 }
 
 .copyright-text {
     font-size: 0.9rem;
+    color: white; 
 }
 
 .socialmedia {
