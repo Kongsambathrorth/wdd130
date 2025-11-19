@@ -185,6 +185,12 @@ nav, p, section, article {
     float: right;
 }
 
+.hero. article img{
+    float: right;
+    width: 125px;
+
+}
+
 /* Ensure paragraph content respects the flex layout */
 .hero article p {
     margin: 0;
@@ -215,11 +221,16 @@ nav, p, section, article {
     display: flex;
     gap: 1rem;
     align-items: center;
+    text-decoration: none
 }
 
 .socialmedia nav {
     display: flex;
     gap: 1rem;
+    text-decoration: none
+}
+.socialmedia a {
+    text-decoration: none
 }
 
 .socialmedia .social-icon {
