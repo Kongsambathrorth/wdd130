@@ -58,6 +58,7 @@ h1, h2 {
 .section-content {
     margin: 1rem 0;
     padding: 0 1rem;
+    color: var(--accent1-color); /* ADDED: Ensure section content text has contrast on the main body color background */
 }
 
 
@@ -77,7 +78,7 @@ h1, h2 {
 nav, p, section, article {
     margin: 1rem 0;
     padding: 0;
-    color: var(--light-text); 
+    /* REMOVED: color: var(--light-text); to prevent low contrast issues where the default text color is used on a dark background */
 }
 
 /* --- Header & Navigation --- */
@@ -86,6 +87,7 @@ nav, p, section, article {
     padding: 0.5rem 0;
     top: 0;
     z-index: 10;
+    color: var(--light-text); /* FIXED: Contrast Violation 1: Ensure text on dark-background is light */
 }
 
 .header-container {
@@ -93,12 +95,14 @@ nav, p, section, article {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
+    color: var(--light-text); /* FIXED: Contrast Violation 2: Ensure text on primary-color is light */
 }
 
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: var(--light-text); /* ADDED: Ensure logo-link text is light */
 }
 
 .logo-img {
@@ -253,10 +257,11 @@ nav, p, section, article {
 .photo-section {
     background-color: var(--secondary-bg);
     padding: 4rem 0;
+    color: var(--accent1-color); /* FIXED: Contrast Violation 3: Ensure text on light background is a dark color */
 }
 
 h2.section-title.photo-title {
-    color: var(--light-text); 
+    color: var(--primary-dark); /* Ensure this H2 is dark on the secondary-bg background */
 }
 
 .photo-section .content-container {
@@ -302,6 +307,7 @@ h2.section-title.photo-title {
     font-size: 0.875rem;
     font-weight: 500;
     color: #4b5563; 
+} /* REMOVED extra curly brace */
 @media (min-width: 640px) {
     .photo-card {
         flex: 1 1 30%;
