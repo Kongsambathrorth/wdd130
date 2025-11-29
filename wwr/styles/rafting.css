@@ -38,7 +38,6 @@ header, footer {
 
 
 
-
 main {
     width: 1024px;
     margin: 0 auto;
@@ -46,17 +45,10 @@ main {
 }
 
 
-
-
-
-
-
 .content-wrapper {
     margin: 0 auto;
     padding: 0 1rem;
 }
-
-
 
 
 
@@ -178,7 +170,6 @@ nav, p, section, article {
 }
 
 
-
 .hero h1 {
     position: absolute;
     width: 100%;
@@ -219,9 +210,9 @@ nav, p, section, article {
 
 .hero article img{
     width: 125px;
+    float: right;
 }
 
-/* Ensure paragraph content respects the flex layout */
 
 .hero article p {
     margin: 0;
@@ -285,16 +276,11 @@ nav, p, section, article {
 }
 
 
-.photo-card:hover {
-    box-shadow: 0 25px 50px -12px var(--shadow-dark); 
-    transform: translateY(-0.25rem);
-}
+
 
 .photo-card img {
-    width: 100%;
     height: 4rem; 
     object-fit: cover; 
-
 }
 
 
@@ -361,8 +347,6 @@ h2.section-title.photo-title {
     height: 8rem;
     object-fit: cover;
 }
-
-
 
 .photo-card figcaption {
     padding: 0.75rem;
