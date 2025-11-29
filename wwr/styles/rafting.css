@@ -1,5 +1,4 @@
 :root {
-
     --primary-color: #055a05;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
@@ -11,7 +10,6 @@
     --shadow-light: rgba(0, 0, 0, 0.1); 
     --shadow-dark: rgba(0, 0, 0, 0.3);  
     --primary-dark: #003300; 
-
 }
 
 header, footer {
@@ -19,15 +17,11 @@ header, footer {
   width: 100%;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 
 .main-body {
     font-family: var(--body-font);
@@ -35,35 +29,30 @@ header, footer {
     width: 100%;
 }
 
-
-
-
+/* ⚠️ Fix: Removed redundant 'width: 1024px' and 'width: 100%' from main */
 main {
-    width: 1024px;
     margin: 0 auto;
     width: 100%;
 }
-
 
 .content-wrapper {
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-
-
+/* ⚠️ Fix: Standardized 'white' to 'var(--light-text)' for consistency */
 h1, h2 {
     font-family: var(--heading-font);
     background-color: var(--primary-color);
-    color: white;
-   }
+    color: var(--light-text); 
+}
 
+/* ⚠️ Fix: Removed conflicting 'color: var(--light-text)' and 'color: white' */
 .section-container h2 {
-     color: var(--light-text);
     padding: 1rem 0;
     margin: 1rem 0 0 0;
     width: 100%;
-    color: white;
+    color: var(--light-text); 
 }
 
 .section-content {
@@ -71,16 +60,24 @@ h1, h2 {
     padding: 0 1rem;
 }
 
-
+/* ❌ Fix: Consolidated the repeated .hero h1 rule (Rule #10 and #23) */
 .hero h1 {
-    color: #fff;
+    color: var(--light-text); /* Standardized '#fff' to var */
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    align-self: flex-start;
+    background-color: var(--primary-color);
 }
 
 
 nav, p, section, article {
     margin: 1rem 0;
     padding: 0;
-    color: white;
+    color: var(--light-text); /* Standardized 'white' to var */
 }
 
 /* --- Header & Navigation --- */
@@ -98,14 +95,11 @@ nav, p, section, article {
     background-color: var(--primary-color);
 }
 
-
-
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
-
 
 .logo-img {
     width: 80px;
@@ -117,8 +111,6 @@ nav, p, section, article {
     display: none;
 }
 
-
-
 .main-nav {
     display: flex;
     list-style: none;
@@ -128,15 +120,12 @@ nav, p, section, article {
     font-size: 1.1rem;
 }
 
-
-
 .nav-link {
-    color: white;
+    color: var(--light-text); /* Standardized 'white' to var */
     text-decoration: none;
     padding: 0.5rem 0.25rem;
     transition: color 0.3s ease;
 }
-
 
 .nav-link:hover, .nav-link.active {
     color: var(--accent2-color);
@@ -149,7 +138,6 @@ nav, p, section, article {
     margin-top: 0;
     margin-bottom: 2rem;
 }
-
 
 .hero-main-img {
     display: block;
@@ -169,20 +157,6 @@ nav, p, section, article {
     justify-content: space-between;
 }
 
-
-.hero h1 {
-    position: absolute;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 2.5rem;
-    margin: 0;
-    align-self: flex-start;
-    background-color: var(--primary-color);
-}
-
-
 .hero article {
     position: absolute;
     width: 100%;
@@ -190,7 +164,7 @@ nav, p, section, article {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--light-text); /* Standardized '#ffffff' to var */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     border-radius: 0;
@@ -213,13 +187,11 @@ nav, p, section, article {
     float: right;
 }
 
-
 .hero article p {
     margin: 0;
     padding: 0;
     flex-grow: 1;
 }
-
 
 /* --- Footer & Social Media --- */
 
@@ -236,12 +208,10 @@ nav, p, section, article {
     background-color: var(--primary-color)
    }
 
-
 .copyright-text {
     font-size: 0.9rem;
-    color: white;
+    color: var(--light-text); /* Standardized 'white' to var */
 }
-
 
 .socialmedia {
     display: flex;
@@ -249,7 +219,6 @@ nav, p, section, article {
     align-items: center;
     text-decoration: none
 }
-
 
 .socialmedia nav {
     display: flex;
@@ -261,25 +230,21 @@ nav, p, section, article {
     text-decoration: none
 }
 
-
-
 .socialmedia .social-icon {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
 }
 
-
-
 .socialmedia .social-icon:hover {
     transform: scale(1.1);
 }
 
-
-
-
+/* ❌ Fix: Consolidated the repeated .photo-card img rules (Rule #36 and #44).
+   ⚠️ Fix: Retained the later 'height: 8rem' and 'object-fit: cover'. */
 .photo-card img {
-    height: 4rem; 
+    width: 100%; /* Moved from the second rule to the consolidated one */
+    height: 8rem; 
     object-fit: cover; 
 }
 
@@ -292,15 +257,12 @@ nav, p, section, article {
 }
 
 h2.section-title.photo-title {
-    color: white;
+    color: var(--light-text); /* Standardized 'white' to var */
 }
-
 
 .photo-section .content-container {
     width: 100%;
 }
-
-
 
 .photo-title {
     color: var(--primary-dark);
@@ -311,7 +273,6 @@ h2.section-title.photo-title {
     text-align: center; 
 }
 
-
 .photo-grid {
     display: flex;
     flex-wrap: wrap;
@@ -319,15 +280,12 @@ h2.section-title.photo-title {
     gap: 1.5rem;
 }
 
-
 .photo-card {
-
     /* DEFAULT (Mobile/Small Screen): */
     flex: 1 1 150px; 
     min-width: 150px; 
    
- 
-    background-color: white;
+    background-color: var(--light-text); /* Standardized 'white' to var */
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px var(--shadow-light);
     overflow: hidden;
@@ -340,34 +298,23 @@ h2.section-title.photo-title {
     transform: translateY(-0.25rem);
 }
 
-
-
-.photo-card img {
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
-}
-
 .photo-card figcaption {
     padding: 0.75rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #4b5563;
+    color: #4b5563; /* Kept as hex, or you could add a new variable like --card-text-color */
 }
-
 
 @media (min-width: 640px) {
     .photo-card {
         flex: 1 1 30%;
     }
-
 }
-
 
 @media (min-width: 1024px) {
     .photo-card {
         flex: 1 1 18%;
         max-width: 20%; 
     }
-
 }
+
