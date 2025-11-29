@@ -1,10 +1,24 @@
 :root {
-    --primary-color: #055a05; 
+
+    --primary-color: #055a05;
     --accent1-color: #264653;
-    --accent2-color: #e9c46a; 
+    --accent2-color: #e9c46a;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
+    --light-text: #ffffff; 
+    --dark-background: #003300; 
+    --secondary-bg: #f4f4f4; 
+    --shadow-light: rgba(0, 0, 0, 0.1); 
+    --shadow-dark: rgba(0, 0, 0, 0.3);  
+    --primary-dark: #003300; 
+
 }
+
+header, footer {
+  margin: 0 auto;
+  width: 100%;
+}
+
 
 
 * {
@@ -13,45 +27,57 @@
     box-sizing: border-box;
 }
 
-.main-body { 
+
+
+.main-body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    width: 100%;
 }
+
+
+
 
 
 main {
-    width: 840px; 
+    width: 1024px;
     margin: 0 auto;
+    width: 100%;
 }
 
 
-.content-wrapper { 
-    max-width: 840px; 
+
+
+
+
+
+.content-wrapper {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+
+
 
 
 h1, h2 {
     font-family: var(--heading-font);
     background-color: var(--primary-color);
-    
-}
-
+    color: white;
+   }
 
 .section-container h2 {
-   
-    color: var(--light-text);
+     color: var(--light-text);
     padding: 1rem 0;
-    margin: 1rem 0 0 0; 
+    margin: 1rem 0 0 0;
     width: 100%;
     color: white;
 }
+
 .section-content {
     margin: 1rem 0;
     padding: 0 1rem;
 }
-
 
 
 .hero h1 {
@@ -60,15 +86,14 @@ h1, h2 {
 
 
 nav, p, section, article {
-    margin: 1rem 0; 
-    padding: 0; 
+    margin: 1rem 0;
+    padding: 0;
+    color: white;
 }
 
-
 /* --- Header & Navigation --- */
-
 .main-header {
-    background-color: var(--dark-background); 
+    background-color: var(--dark-background);
     padding: 0.5rem 0;
     top: 0;
     z-index: 10;
@@ -81,21 +106,26 @@ nav, p, section, article {
     background-color: var(--primary-color);
 }
 
+
+
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
+
 .logo-img {
-    width: 80px; 
+    width: 80px;
     height: auto;
     padding: 0.5rem;
 }
 
 .logo-text {
-    display: none; 
+    display: none;
 }
+
+
 
 .main-nav {
     display: flex;
@@ -106,6 +136,8 @@ nav, p, section, article {
     font-size: 1.1rem;
 }
 
+
+
 .nav-link {
     color: white;
     text-decoration: none;
@@ -113,10 +145,10 @@ nav, p, section, article {
     transition: color 0.3s ease;
 }
 
+
 .nav-link:hover, .nav-link.active {
     color: var(--accent2-color);
 }
-
 
 /* --- Hero Section --- */
 
@@ -126,74 +158,71 @@ nav, p, section, article {
     margin-bottom: 2rem;
 }
 
-.hero-main-img { 
+
+.hero-main-img {
     display: block;
     width: 100%;
-    height: auto; 
+    height: auto;
 }
-    
 
 .hero-content-wrapper {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     background-color: var(--primary-color);
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
+
+
 
 .hero h1 {
     position: absolute;
     width: 100%;
     padding: 1rem;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.8); 
     color: #fff;
     font-size: 2.5rem;
     margin: 0;
     align-self: flex-start;
-      background-color: var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 
 .hero article {
     position: absolute;
-    width: 100%; 
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(46, 79, 92, 0.8); 
     color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 1rem;
-    border-radius: 0; 
-    z-index: 5; 
-    margin: 0; 
-      background-color: var(--primary-color);
-    
-}
+    border-radius: 0;
+    z-index: 5;
+    margin: 0;
+    background-color: var(--primary-color);
+   }
 
 /* Styling for the small image inside the article */
+
 .hero article .article-img {
-    width: 125px;
+    width: 200px;
     height: auto;
     margin-left: 1rem;
     flex-shrink: 0;
-    float: right;
-}
+    }
 
 .hero article img{
-    float: right;
     width: 125px;
-
 }
 
 /* Ensure paragraph content respects the flex layout */
+
 .hero article p {
     margin: 0;
     padding: 0;
@@ -213,13 +242,15 @@ nav, p, section, article {
     display: flex;
     justify-content: space-between;
     align-items: center;
-     background-color: var(--primary-color)
-}
+    background-color: var(--primary-color)
+   }
+
 
 .copyright-text {
     font-size: 0.9rem;
-    color: white; 
+    color: white;
 }
+
 
 .socialmedia {
     display: flex;
@@ -228,21 +259,131 @@ nav, p, section, article {
     text-decoration: none
 }
 
+
 .socialmedia nav {
     display: flex;
     gap: 1rem;
     text-decoration: none
 }
+
 .socialmedia a {
     text-decoration: none
 }
 
+
+
 .socialmedia .social-icon {
-    width: 30px; 
+    width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
 }
 
+
+
 .socialmedia .social-icon:hover {
     transform: scale(1.1);
+}
+
+
+.photo-card:hover {
+    box-shadow: 0 25px 50px -12px var(--shadow-dark); 
+    transform: translateY(-0.25rem);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 4rem; 
+    object-fit: cover; 
+
+}
+
+
+/* --- 3. Photo Grid Section --- */
+
+.photo-section {
+    background-color: var(--secondary-bg);
+    padding: 4rem 0;
+}
+
+h2.section-title.photo-title {
+    color: white;
+}
+
+
+.photo-section .content-container {
+    width: 100%;
+}
+
+
+
+.photo-title {
+    color: var(--primary-dark);
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center; 
+}
+
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.photo-card {
+
+    /* DEFAULT (Mobile/Small Screen): */
+    flex: 1 1 150px; 
+    min-width: 150px; 
+   
+ 
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px var(--shadow-light);
+    overflow: hidden;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.photo-card:hover {
+    box-shadow: 0 25px 50px -12px var(--shadow-dark);
+    transform: translateY(-0.25rem);
+}
+
+
+
+.photo-card img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+}
+
+
+
+.photo-card figcaption {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+
+@media (min-width: 640px) {
+    .photo-card {
+        flex: 1 1 30%;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    .photo-card {
+        flex: 1 1 18%;
+        max-width: 20%; 
+    }
+
 }
