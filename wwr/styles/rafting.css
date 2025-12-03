@@ -442,3 +442,7 @@ h2.section-title.photo-title {
     color: var(--text-color);
 }
 
+/* New CSS added here to fix the inline style issue */
+.location-map iframe {
+    border: 0;
+}
