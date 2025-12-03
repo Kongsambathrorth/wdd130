@@ -349,7 +349,9 @@ h2.section-title.photo-title {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 0;
 }
+
 
 .contact-form-section {
     max-width: 600px;
