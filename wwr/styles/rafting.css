@@ -1,21 +1,43 @@
+/*
+|--------------------------------------------------------------------------
+| 1. CSS VARIABLES (Design Tokens)
+|--------------------------------------------------------------------------
+*/
 :root {
-    --primary-color: #055a05;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
+    /* Colors */
+    --color-primary: #055a05;           /* Dark Green */
+    --color-primary-dark: #003300;      /* Darker Green Background */
+    --color-secondary: #264653;         /* Deep Teal/Slate (Dark Accent) */
+    --color-accent1: #e9c46a;           /* Yellow/Gold (Light Accent) */
+    --color-white: #ffffff;
+    --color-light-gray: #f4f4f4;        /* Secondary BG */
+    --color-dark-gray: #4b5563;         /* Text/Detail color */
+    
+    /* Semantic Colors */
+    --color-success: #10b981;           /* Green for Class I-II */
+    --color-warning: #f59e0b;           /* Yellow for Class III */
+    --color-danger: #ef4444;            /* Red for Class IV-V */
+
+    /* Typography */
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
-    --light-text: #ffffff; 
-    --dark-background: #003300; 
-    --secondary-bg: #f4f4f4; 
+    
+    /* Spacing (Standardizing the space utility) */
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    
+    /* Shadows */
     --shadow-light: rgba(0, 0, 0, 0.1); 
     --shadow-dark: rgba(0, 0, 0, 0.3);  
-    --primary-dark: #003300; 
 }
 
-header, footer {
-  margin: 0 auto;
-  width: 100%;
-}
+/*
+|--------------------------------------------------------------------------
+| 2. BASE STYLES & LAYOUT
+|--------------------------------------------------------------------------
+*/
 
 * {
     margin: 0;
@@ -23,86 +45,76 @@ header, footer {
     box-sizing: border-box;
 }
 
-.main-body {
+body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
-    width: 100%;
+    color: var(--color-secondary);
+    line-height: 1.6;
 }
-
 
 main {
-    margin: 0 auto;
     width: 100%;
-}
-
-.content-wrapper {
+    /* Max-width applied here to center the main content area */
+    max-width: 1400px; 
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
+/* Utility Class for Content Area Width & Centering */
+.container, .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-sm); /* Padding for smaller screens */
+}
 
-h1, h2 {
+/* Shared Section Padding */
+.section-padding {
+    padding: var(--space-xl) var(--space-sm);
+}
+
+/* Typography */
+h1, h2, h3 {
     font-family: var(--heading-font);
-    background-color: var(--primary-color);
-    color: var(--light-text); 
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
 }
 
-
-.section-container h2 {
-    padding: 1rem 0;
-    margin: 1rem 0 0 0;
-    width: 100%;
-    color: var(--light-text); 
-}
-
-.section-content {
-    margin: 1rem 0;
-    padding: 0 1rem;
-    color: var(--accent1-color); 
-}
-
-
-.hero h1 {
-    color: var(--light-text); 
-    position: absolute;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
+h1 {
     font-size: 2.5rem;
-    margin: 0;
-    align-self: flex-start;
-    background-color: var(--primary-color);
-    top: 0;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 1rem 0;
 }
 
 
-nav, p, section, article {
-    margin: 1rem 0;
-    padding: 0;
-   }
-
-/* --- Header & Navigation --- */
+/*
+|--------------------------------------------------------------------------
+| 3. HEADER & NAVIGATION
+|--------------------------------------------------------------------------
+*/
 .main-header {
-    background-color: var(--dark-background);
+    background-color: var(--color-primary-dark);
     padding: 0.5rem 0;
-    top: 0;
     z-index: 10;
-    color: var(--light-text);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--light-text); 
+    background-color: var(--color-primary); /* Use a lighter color for the nav bar background */
+    padding: 0.5rem var(--space-sm);
 }
 
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--light-text); 
+    color: var(--color-white); 
 }
 
 .logo-img {
@@ -112,127 +124,409 @@ nav, p, section, article {
 }
 
 .logo-text {
+    /* Show text on larger screens */
     display: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
 }
 
 .main-nav {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 1.5rem;
-    font-size: 1.1rem;
+    gap: 0.5rem;
+    font-size: 1rem;
 }
 
 .nav-link {
-    color: var(--light-text); 
+    color: var(--color-white); 
     text-decoration: none;
-    padding: 0.5rem 0.25rem;
-    transition: color 0.3s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--accent2-color);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-accent1);
 }
 
-/* --- Hero Section --- */
-
-.hero {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 2rem;
+/*
+|--------------------------------------------------------------------------
+| 4. HERO SECTION (index.html)
+|--------------------------------------------------------------------------
+*/
+.hero-section {
+    padding: var(--space-xl) var(--space-sm);
+    text-align: center; /* Center everything inside */
 }
 
-.hero-main-img {
-    display: block;
+.hero-headline {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-md);
+}
+
+.hero-subtext {
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto var(--space-lg);
+    color: var(--color-dark-gray);
+}
+
+/* CTA Group Styles - Centered */
+.cta-group {
+    display: flex;
+    gap: var(--space-sm);
+    margin: 0 auto var(--space-xl);
+    align-items: center;
+    justify-content: center; /* Centers buttons horizontally */
+}
+
+.cta-button {
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; 
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent; 
+}
+
+.primary-cta {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.primary-cta:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--color-secondary); /* Changed from white to secondary for contrast against white background */
+    border-color: var(--color-secondary);
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.hero-image-container {
+    max-width: 100%;
+    margin: var(--space-lg) auto 0;
+}
+
+.hero-image {
     width: 100%;
-    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px var(--shadow-dark);
 }
 
-.hero-content-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
+/*
+|--------------------------------------------------------------------------
+| 5. SHARED SECTION HEADER & FEATURE GRID
+|--------------------------------------------------------------------------
+*/
+
+.section-tag {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Feature Grid Styles */
+.grid-3-col {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-sm);
+}
+
+.feature-card {
+    background-color: var(--color-light-gray);
+    padding: var(--space-md);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px var(--shadow-dark);
+}
+
+.feature-card h3 {
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+}
+
+.feature-card p {
+    color: var(--color-dark-gray);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 6. TRIP SHOWCASE SECTION
+|--------------------------------------------------------------------------
+*/
+#trips-showcase {
+    background-color: var(--color-light-gray);
+    padding: var(--space-xl) var(--space-sm);
+}
+
+.trip-card {
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 var(--shadow-light);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+    text-decoration: none; /* Ensure links inside card are styled */
+    color: var(--color-secondary);
 }
 
-   .hero article {
-    position: absolute; 
-    bottom: 0; 
+.trip-card:hover {
+    box-shadow: 0 10px 15px -3px var(--shadow-dark);
+}
+
+.trip-card-image {
+    height: 250px;
     width: 100%;
+    object-fit: cover;
+}
+
+.trip-card-body {
+    padding: var(--space-md);
+    flex-grow: 1; 
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--light-text); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    border-radius: 0;
-    z-index: 5;
-    margin: 0;
-    background-color: var(--primary-color);
-   }
-
-
-
-.hero article .article-img {
-    width: 200px;
-    height: auto;
-    margin-left: 1rem;
-    flex-shrink: 0;
-    }
-
-.hero article img{
-    width: 125px;
-    float: right;
+    flex-direction: column;
 }
 
-.hero article p {
-    margin: 0;
-    padding: 0;
+.trip-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: flex-start; /* Keeps tag width only to its content */
+}
+
+/* Trip Tag Colors based on difficulty - Variables were already defined */
+
+.trip-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.trip-card p {
+    margin-bottom: var(--space-sm);
     flex-grow: 1;
+    color: var(--color-dark-gray);
 }
 
-/* --- Footer & Social Media --- */
+.trip-link {
+    font-weight: 600;
+    margin-top: auto; 
+    color: var(--color-primary-dark);
+    text-decoration: none;
+}
 
+.trip-link:hover {
+    text-decoration: underline;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 7. ABOUT US SECTION (index.html)
+|--------------------------------------------------------------------------
+*/
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px var(--shadow-dark);
+}
+
+.about-text p {
+    margin-bottom: var(--space-sm);
+    color: var(--color-dark-gray);
+}
+
+.about-text strong {
+    color: var(--color-primary-dark);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 8. CONTACT FORM SECTION (index.html)
+|--------------------------------------------------------------------------
+*/
+#contact {
+    background-color: var(--color-light-gray); /* Changed to light gray for better contrast */
+    color: var(--color-secondary);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+.contact-info h2 {
+    font-size: 2.25rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+}
+
+.contact-info p {
+    max-width: 500px;
+    margin-bottom: var(--space-md);
+    color: var(--color-secondary);
+}
+
+.contact-details {
+    margin-top: var(--space-md);
+}
+
+.detail-item {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.detail-item span {
+    color: var(--color-primary-dark); /* Changed to darker primary for contact details */
+    margin-left: 0.5rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-dark-gray);
+    background-color: var(--color-white); /* Ensure forms are white */
+    color: var(--color-secondary);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(5, 90, 5, 0.3); /* Primary color glow */
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.form-submit-button {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white); /* Ensure button text is white */
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Select Menu Specific Styles (Cleaned up the inline SVG for better readability) */
+.form-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Use base64 encoding for the arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23264653" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592c.859 0 1.318 1.013.753 1.658l-4.796 5.482a1 1 0 0 1-1.506 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.75rem;
+    padding-right: 2.25rem; 
+}
+
+/* |--------------------------------------------------------------------------
+| 9. FOOTER & SOCIAL MEDIA
+|--------------------------------------------------------------------------
+*/
 .main-footer {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 1.5rem 0;
+    background-color: var(--color-primary);
+    padding: var(--space-md) 0;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color)
-   }
+}
 
 .copyright-text {
     font-size: 0.9rem;
-    color: var(--light-text); 
+    color: var(--color-white); 
+}
+
+.copyright-text a {
+    color: var(--color-accent1);
+    margin-left: 0.5rem;
 }
 
 .socialmedia {
     display: flex;
     gap: 1rem;
     align-items: center;
-    text-decoration: none
-}
-
-.socialmedia nav {
-    display: flex;
-    gap: 1rem;
-    text-decoration: none
-}
-
-.socialmedia a {
-    text-decoration: none
 }
 
 .socialmedia .social-icon {
@@ -245,202 +539,255 @@ nav, p, section, article {
     transform: scale(1.1);
 }
 
+/*
+|--------------------------------------------------------------------------
+| 10. ABOUT PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
+/* The existing CSS for the photo grid and main-body was confusing, 
+   I've adopted the photo-grid structure from the index.html file for consistency. */
 
-.photo-card img {
-    width: 100%; 
-    height: 8rem; 
-    object-fit: cover; 
+/* Photo Grid styles are largely handled in section 6. */
+
+/* Hero on about page (fixed overlapping issue) */
+.hero {
+    position: relative;
+    margin-bottom: var(--space-xl);
 }
 
-
-/* --- 3. Photo Grid Section --- */
-
-.photo-section {
-    background-color: var(--secondary-bg);
-    padding: 4rem 0;
-    color: var(--accent1-color); 
-}
-
-h2.section-title.photo-title {
-    color: var(--primary-dark); 
-}
-
-.photo-section .content-container {
-    width: 100%;
-}
-
-.photo-title {
-    color: var(--primary-dark);
+.hero-main-img {
     display: block;
     width: 100%;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    text-align: center; 
+    height: 350px;
+    object-fit: cover;
 }
 
-.photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.photo-card {
-    /* DEFAULT (Mobile/Small Screen): */
-    flex: 1 1 150px; 
-    min-width: 150px; 
-   
-    background-color: var(--light-text); 
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 15px var(--shadow-light);
-    overflow: hidden;
+.hero h1 {
+    color: var(--color-white); 
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
     text-align: center;
-    transition: all 300ms ease-in-out;
+    font-size: 2.5rem;
+    top: 0;
+    background-color: rgba(5, 90, 5, 0.7); /* Translucent primary color */
 }
 
-.photo-card:hover {
-    box-shadow: 0 25px 50px -12px var(--shadow-dark);
-    transform: translateY(-0.25rem);
+.hero article {
+    position: static; /* Important: Removes absolute positioning */
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    color: var(--color-secondary); 
+    background-color: var(--color-light-gray);
+    padding: var(--space-md);
+    margin: 0;
 }
 
-.photo-card figcaption {
-    padding: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #4b5563; 
-} /* REMOVED extra curly brace */
-@media (min-width: 640px) {
-    .photo-card {
-        flex: 1 1 30%;
-    }
+.hero article .article-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 0 auto 1rem; /* Center image for mobile */
+    float: none;
+    border-radius: 0.25rem;
 }
 
-@media (min-width: 1024px) {
-    .photo-card {
-        flex: 1 1 18%;
-        max-width: 20%; 
-    }
+.hero article p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    text-align: left;
 }
 
+/*
+|--------------------------------------------------------------------------
+| 11. CONTACT PAGE SPECIFIC STYLES
+|--------------------------------------------------------------------------
+*/
 
-/* ---------------------------------------------------------------------- */
-/* 6. Contact Us Page Specific Styles */
-/* ---------------------------------------------------------------------- */
+#contact-page .hero-section {
+    padding: var(--space-lg) var(--space-sm);
+    text-align: left;
+}
+
 .contact-info-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.company-info {
-    padding: 20px;
-    background-color: var(--accent2-color);
-    border-radius: 10px;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
 }
 
 .info-contact {
-    font-size: 1.2em;
-    font-weight: 700;
-    margin-bottom: 0.5em;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
 }
 
-.location-map {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 0;
-}
-
-
-.contact-form-section {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.contact-form-section h2 {
-    border-bottom-color: var(--primary-color);
-}
-
-#contact-form .form-group {
-    margin-bottom: 15px;
-}
-
-#contact-form label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: var(--primary-color);
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form select,
-#contact-form textarea {
+.location-map iframe {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    border: 0;
+    min-height: 300px;
 }
 
-#contact-form textarea {
-    resize: vertical;
-}
-
-.radio-group label {
-    display: inline-block;
-    font-weight: normal;
-    margin-right: 15px;
-}
-
-
-
-.profile-name {
-    font-weight: 700;
-    color: var(--primary-color);
-    margin: 0;
-}
-
-.profile-role {
-    font-style: italic;
-    color: #666;
-    margin: 0;
-}
-
-
-.team-gallery {
-    display: flex;
-    justify-content: center; 
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap; 
-}
-
-.team-profiles-section .gallery-item {
-    flex: 1 1 250px; 
-    max-width: 300px; 
+/* Team Profiles Section */
+.team-profiles-section {
+    padding: var(--space-xl) var(--space-sm);
     text-align: center;
 }
 
-.gallery-item img {
+.team-profiles-section h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.gallery-item {
+    background-color: var(--color-light-gray);
+    padding: var(--space-md);
+    border-radius: 0.5rem;
+}
+
+.team-profile-img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+    border: 3px solid var(--color-accent1);
 }
 
-.gallery-item img:hover {
-    transform: scale(1.05);
+.profile-name {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    margin: 0.5rem 0;
 }
 
-.gallery-item figcaption {
-    margin-top: 5px;
-    font-style: italic;
-    color: var(--text-color);
+.profile-role {
+    font-size: 0.9rem;
+    color: var(--color-dark-gray);
+    margin: 0;
 }
 
+/* Contact Form Specifics (Contact Page) */
+.contact-form-section {
+    background-color: var(--color-light-gray);
+    padding: var(--space-xl) var(--space-sm);
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px var(--shadow-light);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.radio-group label, .checkbox-group label {
+    font-weight: normal;
+    margin-right: 1rem;
+}
+
+.radio-group input[type="radio"], .checkbox-group input[type="checkbox"] {
+    margin-left: 0.5rem;
+}
+
+.button {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/*
+|--------------------------------------------------------------------------
+| 12. MEDIA QUERIES (Responsiveness)
+|--------------------------------------------------------------------------
+*/
+
+/* Tablet/Medium Screens (640px and up) */
+@media (min-width: 640px) {
+    /* Header/Nav */
+    .main-nav {
+        gap: 1.5rem;
+    }
+    .logo-text {
+        display: inline;
+    }
+
+    /* Index Page Grids */
+    .grid-3-col {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Contact Page Grids */
+    .contact-info-grid {
+        grid-template-columns: 1fr 1.5fr; /* Info on left, Map on right */
+    }
+    
+    .location-map iframe {
+        min-height: 400px;
+    }
+
+    /* About Page Hero */
+    .hero article {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: var(--space-lg);
+    }
+    
+    .hero article .article-img {
+        margin: 0 0 0 1.5rem;
+    }
+    
+}
+
+/* Desktop Screens (1024px and up) */
+@media (min-width: 1024px) {
+    
+    .hero-headline {
+        font-size: 4rem;
+    }
+    
+    /* Index Page - Contact Section Grid */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero-main-img {
+        height: 450px;
+    }
+
+}

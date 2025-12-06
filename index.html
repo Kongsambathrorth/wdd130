@@ -1,21 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sambathrorth Kong | WDD 130</title>
-    <meta name="description" content="Sambathrorth Kong BYU-Idaho WDD 130 course home page">
-    <meta name="author" content="Sambathrorth Kong">
-    <link rel="stylesheet" href="styles/styles.css">
+    <title> About Us - White Water Rafting Company</title>
+
+    <meta name="description"
+        content="Discover the thrilling history, passionate mission, and dedicated team behind White Water Rafting Co. Your ultimate river adventure starts here!">
+    <meta name="author" content="Kongsambathrorth">
+    <link rel="stylesheet" href="./styles/rafting.css">
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
-        </nav>
+    <header class="main-header">
+        <div class="header-container content-wrapper">
+
+            <a href="index.html" class="logo-link">
+
+                <img src="images/z-splash.png" alt="White Water Rafting Co. Logo" class="logo-img"
+                    onerror="this.onerror=null; this.src='https://placehold.co/80x80/264653/ffffff?text=LOGO';" />
+                <span class="logo-text">WWR Co.</span>
+            </a>
+
+
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="trips.html" class="nav-link">Trips</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <h1>Sambathrorth Kong | WDD 130</h1>
@@ -42,8 +57,30 @@
             Cambodia. The city is about 11 km (7 mi) south of Phnom Penh (directly borders Phnom Penh).</p>
     </aside>
 
-    <footer>
-        <p>&copy;2025 Sambathrorth Kong | Kandal, Cambodia</p>
+    <footer class="main-footer">
+        <div class="footer-container content-wrapper">
+
+            <p class="copyright-text">
+                &copy; <span id="currentYear">2025</span> White Water Rafting Co. Kongsambathrorth
+            </p>
+
+            <nav class="socialmedia">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.svg" alt="Facebook Icon" class="social-icon"
+                        onerror="this.onerror=null; this.src='https://placehold.co/30x30/1e40af/ffffff?text=FB';">
+                </a>
+
+                <a href="https://linkein.com" target="_blank">
+                    <img src="images/linkedin.svg" alt="LinkedIn Icon" class="social-icon"
+                        onerror="this.onerror=null; this.src='https://placehold.co/30x30/000000/ffffff?text=X';">
+                </a>
+
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram Icon" class="social-icon"
+                        onerror="this.onerror=null; this.src='https://placehold.co/30x30/f43f5e/ffffff?text=IG';">
+                </a>
+            </nav>
+        </div>
     </footer>
 
 </body>
