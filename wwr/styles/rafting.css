@@ -1,6 +1,6 @@
 /*
 |--------------------------------------------------------------------------
-| 1. CSS VARIABLES (Design Tokens)
+| 1. CSS VARIABLES
 |--------------------------------------------------------------------------
 */
 :root {
@@ -53,14 +53,13 @@ body {
 
 main {
     width: 100%;
-    /* Max-width applied here to center the main content area */
     max-width: 1400px; 
     margin: 0 auto;
 }
 
 /* Utility Class for Content Area Width & Centering */
 .container, .content-wrapper {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 var(--space-sm); /* Padding for smaller screens */
 }
@@ -106,8 +105,8 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-primary); /* Use a lighter color for the nav bar background */
-    padding: 0.5rem var(--space-sm);
+    background-color: var(--color-primary-dark); /* Use a lighter color for the nav bar background */
+    padding: 0.1rem var(--space-sm);
 }
 
 .logo-link {
@@ -118,9 +117,9 @@ p {
 }
 
 .logo-img {
-    width: 80px;
+    width: 50px;
     height: auto;
-    padding: 0.5rem;
+    padding: 0.2rem;
 }
 
 .logo-text {
@@ -387,6 +386,53 @@ p {
     color: var(--color-primary-dark);
 }
 
+/* Container for the grid layout */
+.photo-grid {
+    display: grid;
+    /* Sets up a responsive grid with columns that repeat and scale */
+    /* It will create columns that are at least 300px wide, adjusting the column count automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em; /* Spacing between grid items */
+    margin-top: 2em; /* Add some space below the title */
+}
+
+/* Styling for each image card */
+.photo-card {
+    margin: 0; /* Remove default figure margins */
+    overflow: hidden; /* Important for containing the scaled image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Slightly rounded corners */
+    display: flex; /* Makes it easy to center the figcaption */
+    flex-direction: column;
+}
+
+/* Styling for the images inside the cards */
+.photo-card img {
+    width: 100%; /* Image takes up the full width of its container */
+    height: 250px; /* Fixed height for visual consistency in the grid */
+    object-fit: cover; /* Ensures the image covers the area without distortion, cropping if necessary */
+    display: block;
+    /* Optional: Smooth transition for hover effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Hover effect for a more interactive gallery */
+.photo-card:hover img {
+    transform: scale(1.05); /* Slightly zooms the image on hover */
+}
+
+/* Styling for the captions */
+.photo-card figcaption {
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: #f7f7f7; /* Light background for the caption */
+    color: #333;
+}
+
+
+
 /*
 |--------------------------------------------------------------------------
 | 8. CONTACT FORM SECTION (index.html)
@@ -485,7 +531,7 @@ p {
     background-color: var(--color-primary-dark);
 }
 
-/* Select Menu Specific Styles (Cleaned up the inline SVG for better readability) */
+/* Select Menu Specific Styles 
 .form-select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -503,14 +549,16 @@ p {
 |--------------------------------------------------------------------------
 */
 .main-footer {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-dark);
     padding: var(--space-md) 0;
+    padding: 0.5%;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0%;
 }
 
 .copyright-text {
@@ -543,13 +591,9 @@ p {
 |--------------------------------------------------------------------------
 | 10. ABOUT PAGE SPECIFIC STYLES
 |--------------------------------------------------------------------------
-*/
-/* The existing CSS for the photo grid and main-body was confusing, 
-   I've adopted the photo-grid structure from the index.html file for consistency. */
 
-/* Photo Grid styles are largely handled in section 6. */
 
-/* Hero on about page (fixed overlapping issue) */
+
 .hero {
     position: relative;
     margin-bottom: var(--space-xl);
@@ -570,11 +614,11 @@ p {
     text-align: center;
     font-size: 2.5rem;
     top: 0;
-    background-color: rgba(5, 90, 5, 0.7); /* Translucent primary color */
+    background-color: rgba(5, 90, 5, 0.7);
 }
 
 .hero article {
-    position: static; /* Important: Removes absolute positioning */
+    position: static; 
     width: 100%;
     display: flex;
     flex-direction: column; 
