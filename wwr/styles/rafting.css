@@ -370,7 +370,7 @@ p {
 }
 
 .about-image {
-    width: 100%;
+   width: fit-content;
     max-height: 500px;
     object-fit: cover;
     border-radius: 0.5rem;
@@ -531,19 +531,33 @@ p {
     background-color: var(--color-primary-dark);
 }
 
-/* Select Menu Specific Styles 
+/* Select Menu Specific Styles */
 .form-select {
+    /* 1. Remove default browser styling */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    /* Use base64 encoding for the arrow */
+    
+    /* 2. Custom Arrow (Corrected Base64) */
+    /* The '#' in the color code must be URL-encoded as %23 */
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23264653" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592c.859 0 1.318 1.013.753 1.658l-4.796 5.482a1 1 0 0 1-1.506 0z"/></svg>');
+    
+    /* 3. Positioning and Sizing */
     background-repeat: no-repeat;
+    /* Position the arrow on the right, 0.75rem from the edge, vertically centered */
     background-position: right 0.75rem center;
-    background-size: 0.75rem;
+    /* Size of the arrow */
+    background-size: 0.75rem; 
+    
+    /* 4. Padding */
+    /* Add extra padding on the right to make space for the custom arrow */
     padding-right: 2.25rem; 
+    
+    /* 5. Essential visual styles (often necessary when using appearance: none) */
+    border: 1px solid #ccc; /* Add a visible border */
+    border-radius: 0.25rem; /* Soften the corners */
+    line-height: 1.5; /* Ensure text is properly vertically aligned */
 }
-
 /* |--------------------------------------------------------------------------
 | 9. FOOTER & SOCIAL MEDIA
 |--------------------------------------------------------------------------
@@ -588,58 +602,70 @@ p {
 }
 
 /*
-|--------------------------------------------------------------------------
+/*--------------------------------------------------------------------------
 | 10. ABOUT PAGE SPECIFIC STYLES
-|--------------------------------------------------------------------------
+|--------------------------------------------------------------------------*/
 
-
-
+/* --- HERO SECTION CONTAINER --- */
 .hero {
     position: relative;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl); 
 }
 
+/* --- HERO IMAGE --- */
 .hero-main-img {
-    display: block;
-    width: 100%;
+    width: 100%; 
     height: 350px;
     object-fit: cover;
+    display: block; 
 }
 
+/* --- HERO TITLE OVERLAY --- */
 .hero h1 {
     color: var(--color-white); 
     position: absolute;
     width: 100%;
+    top: 55%; /* 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Pull back by half its own width/height */
     padding: 1rem;
     text-align: center;
-    font-size: 2.5rem;
-    top: 0;
-    background-color: rgba(5, 90, 5, 0.7);
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Make font responsive */
+    /* Use a more descriptive name for the dark overlay background */
+    background-color: rgba(0, 0, 0, 0.65); /* A black overlay is often more neutral/readable */
+    /* Ensure text is above the image if other elements are inside .hero */
+    z-index: 10; 
 }
 
+/* --- HERO ARTICLE (CONTENT BOX) --- */
 .hero article {
     position: static; 
-    width: 100%;
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
     color: var(--color-secondary); 
     background-color: var(--color-light-gray);
     padding: var(--space-md);
-    margin: 0;
+    margin: 0; /* Ensures it sits flush */
+    /* Optional: Add slight shadow to lift the content box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+/* --- ARTICLE IMAGE INSIDE CONTENT BOX --- */
 .hero article .article-img {
-    width: 100%;
-    max-width: 150px;
+    width: 100%; /* Ensure responsiveness within the article */
     height: auto;
-    margin: 0 auto 1rem; /* Center image for mobile */
-    float: none;
+    max-width: 300px; /* Optional: Limit max size for large screens */
+    margin: 0 auto 1rem; /* Center image for small screens (default for column layout) */
+    /* float: none is redundant in a flex column layout */
     border-radius: 0.25rem;
+    display: block;
 }
 
+/* --- ARTICLE TEXT --- */
 .hero article p {
-    margin: 0;
+    margin-top: 0; /* Use consistent margin rules */
+    margin-bottom: 1rem; /* Add space below paragraphs */
     padding: 0;
     font-size: 1rem;
     text-align: left;
