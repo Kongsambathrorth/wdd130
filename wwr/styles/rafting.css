@@ -155,8 +155,10 @@ p {
 
 .nav-link:hover,
 .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    background-color: var(--color-accent1);
+    /* Uses your gold accent color */
+    color: var(--color-primary-dark);
+    /* Dark text for contrast against the gold background */
 }
 
 /*
